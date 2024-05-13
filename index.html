@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Daniel McIntyre</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
+    <meta name="author" content="Daniel McIntyre's Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <!-- [if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif] -->
+</head>
+
+<body>
+    <header>
+        <nav class="nav-menu">
+            <ul class="nav_list">
+                <li class="nav_item current"><a href="#Home" class="nav_link">Home</a></li>
+                <li class="nav_item"><a href="#About" class="nav_link">About</a></li>
+                <li class="nav_item"><a href="#Skills" class="nav_link">Skills</a></li>
+                <li class="nav_item"><a href="#Work" class="nav_link">Work</a></li>
+                <li class="nav_item"><a href="#Contact" class="nav_link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <div style="width: 95%; margin-left: auto; margin-right: auto; height: 100vh;">
+    <section id="Home">
+        <aside id="leftsidebar">
+            <img src="./assets/images/me.png"
+                alt="A handsome man infront of a lake in the woods"
+                width="100%"/>
+            <br><br>
+                <a href="./assets/documents/DanielMcIntyreCV.pdf" style="color: rgba(255, 255, 255, 0.774);" download>
+                    <button class="btn">
+                        <i class="fa-solid fa-download fa-1x" style="color: #ffffffc5;"></i>
+                        Download my CV!
+                    </button>
+                </a>
+                <br><br>
+        </aside>
+    </section>
+
+        <main class="maintext">
+            <h1>
+               Hi, I'm
+               <span class="boldcolour">Daniel</span>.
+               <br>
+               I'm a software engineer.
+               <br>
+               My core skills include <span id="coreskills" class="boldcolour"></span>
+            </h1>
+
+        </main>
+
+    </div>
+
+    <section class="about_section" id="About">
+        <h2 class="section_title">About</h2>
+
+        <img src="./assets/images/graduation.png" alt="Me Graduating"
+            class="about_image">
+
+        <main class="about_section_main">
+            I have a background in engineering and have a Masters in Mechanical Engineering from the University of Bristol.
+            It was through this course and the programming and computer science modules I completed that I decided I wanted
+            to go into software engineering. I chose a lot of computer science and programming heavy modules throughout my
+            Bachelors and Masters years, which really helped me develop my programming and problem solving skills. I worked
+            with a variety of languages during my time at University, for example; Modelling 3D heat transfer in C++, Modelling
+            the human cochlear in Python, and carrying out structural integrity analysis in MATLAB to name a few.
+            <br>
+            <br>
+            After completing my Masters degree I went on to work as a backend software engineer at NCR Voyix. I've worked with
+            loads of new technologies and really improved as a software engineer and I've loved doing it.
+        </main>
+    </section>
+    <br><br>
+
+    <section class="skills_section" id="Skills">
+        <h2 class="section_title">Skills</h2>
+        <div class="skills_container">
+            <ul class="skills">
+                <li>
+                    <h2 class="skillsRow1">
+                        <i class="fa-brands fa-python"
+                            style="color: #ffffff;"></i>
+                        Python
+                    </h2>
+                </li>
+                <li>
+                    <h2 class="skillsRow2">
+                        <i class="fa-brands fa-golang"
+                        style="color: #ffffff;"></i>
+                        Go
+                    </h2>
+                </li>
+            </ul>
+
+            <ul class="skills">
+                <li>
+                    <h2 class="skillsRow1">
+                        <i class="fa-brands fa-github"
+                            style="color: #ffffff;"></i>
+                        Git
+                    </h2>
+                <li>
+                <li>
+                    <h2 class="skillsRow2">
+                        <i class="fa-brands fa-docker"
+                            style="color: #ffffff;"></i>
+                        Docker
+                    </h2>
+                </li>
+            </ul>
+
+            <ul class="skills">
+                <li>
+                    <h2 class="skillsRow1">
+                        <i class="fa-brands fa-linux"
+                        style="color: #ffffff;"></i>
+                        Linux
+                    </h2>
+                </li>
+                <li>
+                    <h2 class="skillsRow2">
+                        <i class="fa-solid fa-couch"
+                            style="color: #ffffff;"></i>
+                        CouchDB
+                    </h2>
+                </li>
+            </ul>
+        </div>
+        <br><br>
+
+    </section>
+
+    <section id="Work">
+        <h2 class="section_title">Work Experience</h2>
+
+        <h5 class="experience_large_text">
+            Software engineer
+            <br>
+            <span class="experience_med_text">NCR Voyix</span>
+            <br>
+            <span class="experience_med_text">(July 2022 - Present)</span>
+        </h5>
+
+        <main class="ncr_experience">
+            I am a backend software engineer at NCR Voyix, where I primarily work with Python on Linux. I mainly work on
+            the large scale distribution of custom golden images to our customers as well as injecting customer virtual
+            machines with these images and I've had the opportunity to work with lots of great technologies in this role.
+            I have been able to develop my skills and deliver quality features to our production environments using concepts
+            and technologies like Docker, Kubernetes, Virtualisation, Ansible, and Terraform, amoungst others. I also have
+            experience working with REST APIs, SQL and noSQL databases (postgres and CouchDB specifically), GitHub pipelines,
+            TDD (test driven development), as well some experience working with cloud technologies like AWS. I'm constantly
+            trying to learn and improve my skills both inside and outside of work.
+        </main>
+
+    </section>
+
+    <section class="contact_section" id="Contact">
+        <h5 class="section_title">Contact Me</h5>
+        <form action="/send-email" method="POST">
+            <input type="text" id="name" placeholder="Name"
+                name="name" class="contact_input" required>
+            <br><br>
+
+            <input type="email" id="email" placeholder="Email"
+                name="email" class="contact_input" required>
+            <br><br>
+
+            <textarea name="message" id="message" cols="21"
+                rows="6" class="contact_message"></textarea>
+            <br><br>
+
+            <input type="submit" value="Submit" class="send_button">
+        </form>
+        <br>
+
+    </section>
+
+    <footer>
+        <div class="footer_links_container">
+            <a href="https://www.linkedin.com/in/mcintyre-daniel/"
+                target="_blank" class="footer_icon">
+                <i class="fa-brands fa-linkedin"
+                    style="color: #ffffff;"></i>
+            </a>
+            <a href="https://github.com/DanielMcIntyre56"
+            target="_blank" class="footer_icon">
+            <i class="fa-brands fa-github"
+                style="color: #ffffff;"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="./scripts/frontend.js"></script>
+</body>
+</html>

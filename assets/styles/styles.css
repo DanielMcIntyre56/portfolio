@@ -1,0 +1,322 @@
+/*Here we are setting sizes relative to the root element
+For example 8rem would be 8x the size of the root element font.
+So used for a margin it would move an elem by 8x the font size*/
+:root{
+    --center-intro-text-offset: 15rem;
+    --intro-text-size: 1.25rem;
+    --nav-menu-size: 3.5rem;
+    --profile-picture-vertical-offset: 12rem;
+    --red-elements: #ee1d1d;
+    --red-elements-hover: #f71414;
+    --bold-colour: rgba(255, 255, 255, 0.774);
+    --section-text-colour: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+ul li:hover {
+    transform: scale(1.2);
+}
+
+body {
+    background-color: #111010;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    overflow: scroll;
+}
+
+nav {
+    background-color: #1f1e1e;
+    height: var(--nav-menu-size);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0rem;
+    z-index: 1;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    color: var(--section-text-colour);
+}
+
+.nav_item {
+    margin-right: 3rem;
+    display: inline-block;
+    padding-bottom: 3%;
+}
+
+.nav_link {
+    color: var(--section-text-colour);
+    text-decoration: none;
+}
+
+.nav_item.current .nav_link {
+    border-bottom: 0.15rem solid var(--red-elements);
+    padding-bottom: 0.15rem;
+}
+
+.boldcolour {
+    color: var(--bold-colour);
+}
+
+.btn {
+    font-size: 1.25rem;
+    background-color: var(--red-elements);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--red-elements-hover)
+}
+
+#leftsidebar {
+    float: left;
+    width: 25%;
+    margin-left: 8%;
+    margin-top: var(--profile-picture-vertical-offset);
+    text-align: center;
+}
+
+.maintext {
+    float: right;
+    width: 52%;
+    position: relative;
+    margin-top: var(--center-intro-text-offset);
+    font-size: var(--intro-text-size);
+}
+
+.section_title {
+    color: var(--red-elements);
+    font-size: 3rem;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 5%;
+}
+
+/* About section */
+.about_section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_section_main {
+    width: 50%;
+    float: right;
+    color: var(--section-text-colour);
+}
+
+.about_image {
+    width: 30%;
+    margin-left: 4rem;
+}
+
+/* Skills section */
+.skills_section {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.skills_container {
+    margin-right: 10rem;
+}
+
+.skills {
+    color: var(--section-text-colour);
+    margin-left: 10rem;
+}
+
+/* Work experience section */
+.experience_large_text {
+    color: var(--section-text-colour);
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.experience_med_text {
+    font-size: 1.25rem;
+}
+
+.ncr_experience {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--section-text-colour);
+}
+
+/* Contact me section */
+.contact_section {
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--section-text-colour);
+}
+
+
+.contact_input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.contact_message {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.send_button {
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+footer {
+    clear: both; /*This puts the footer below all other elements*/
+    text-align: center;
+    height: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer_links_container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_icon {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+/* Fix small size screens TODO: medium size on pc browser also */
+@media only screen and (max-width: 600px) {
+    .nav_item {
+        margin-right: 1.5rem;
+    }
+
+    #leftsidebar {
+        width: 125px;
+    }
+
+    .btn {
+        font-size: 0.5rem;
+        background-color: var(--red-elements);
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .maintext {
+        float: right;
+        width: 50%;
+        position: relative;
+        margin-top: 12.5rem;
+        font-size: 0.5rem;
+    }
+
+    .section_title {
+        font-size: 1.75rem;
+    }
+
+    .about_image {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .about_section_main {
+        width: 100%;
+        float: none;
+        margin-left: 5%;
+    }
+
+    .skills {
+        margin-left: 50%;
+    }
+
+    .skills_container {
+        margin-right: 43%;
+    }
+
+    .ncr_experience {
+        width: 80%;
+        float: none;
+        margin-left: 12.5%;
+    }
+
+    .contact_input {
+        width: 70%;
+    }
+
+    .contact_message {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+    #leftsidebar {
+        width: 225px;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+        background-color: var(--red-elements);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .maintext {
+        float: right;
+        width: 45%;
+        position: relative;
+        margin-top: var(--center-intro-text-offset);
+        font-size: 0.75rem;
+    }
+
+    .section_title {
+        font-size: 2.5rem;
+    }
+
+    .about_image {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .about_section_main {
+        width: 80%;
+        float: none;
+        margin-left: 15%;
+    }
+
+    .skills {
+        margin-left: 50%;
+    }
+
+    .skills_container {
+        margin-right: 37%;
+    }
+}
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
