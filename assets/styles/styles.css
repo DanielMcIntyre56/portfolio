@@ -7,9 +7,10 @@ So used for a margin it would move an elem by 8x the font size*/
     --nav-menu-size: 3.5rem;
     --profile-picture-vertical-offset: 12rem;
     --red-elements: #ee1d1d;
+    --bold-red: #bd0d0d;
     --red-elements-hover: #f71414;
-    --bold-colour: rgba(255, 255, 255, 0.774);
     --section-text-colour: whitesmoke;
+    --bold-white: rgba(255, 255, 255, 0.774);
 }
 
 ul {
@@ -63,12 +64,12 @@ nav {
 }
 
 .boldcolour {
-    color: var(--bold-colour);
+    color: var(--bold-red);
 }
 
 .btn {
     font-size: 1.25rem;
-    background-color: var(--red-elements);
+    background-color: var(--bold-red);
     padding: 0.75rem 1.5rem;
     border-radius: 0.75rem;
     cursor: pointer;
@@ -93,6 +94,7 @@ nav {
     position: relative;
     margin-top: var(--center-intro-text-offset);
     font-size: var(--intro-text-size);
+    color: var(--bold-white);
 }
 
 .section_title {
