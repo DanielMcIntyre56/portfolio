@@ -8,6 +8,7 @@ new Typewriter(myApp, {
     strings: [
         'python.',
         'linux & bash.',
+        'AWS.',
         'git.',
         'docker.',
         'kubernetes.',
