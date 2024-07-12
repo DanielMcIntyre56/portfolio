@@ -1,16 +1,28 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const nodeMailer = require('nodemailer')
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodeMailer = require('nodemailer');
 const path = require('path');
 const favicon = require('serve-favicon');
+const rateLimit = require('express-rate-limit');
 
 // ExpressJS app to handle backend
 const app = express()
 
+// Enable 'trust proxy' to allow using 'X-Forwarded-For' header
+// so IPs sending requests can be tracked by middleware
+app.set('trust proxy', '<number of proxies>');
+app.get('/ip', (request, response) => response.send(request.ip))
+
+const limiter = rateLimit({
+    windowMs: 60 * 1000,
+    max: 5,
+});
+
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/send-email', limiter)
 
-// Serve static files
+// Serve static files with middleware
 // TODO: Use a module bundler for these instead
 // TODO: Use public dir to house these?
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
