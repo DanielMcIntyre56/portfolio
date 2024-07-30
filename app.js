@@ -10,7 +10,7 @@ const app = express()
 
 // Enable 'trust proxy' to allow using 'X-Forwarded-For' header
 // so IPs sending requests can be tracked by middleware
-app.set('trust proxy', '<number of proxies>');
+app.set('trust proxy', '1');
 app.get('/ip', (request, response) => response.send(request.ip))
 
 const limiter = rateLimit({
